@@ -1,4 +1,4 @@
-##Requirements for the Exercise
+## Requirements for the Exercise
 * Java 1.8
 * Python 3.X
 * Access to a Terminal
