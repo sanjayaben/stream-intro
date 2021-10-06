@@ -5,8 +5,6 @@ import logging
 BROKER_URL = "localhost:9092"
 TOPIC = "com.sfo.crimes.calls"
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 
 consumer = KafkaConsumer(
@@ -19,8 +17,7 @@ def run_consumer():
     while(True):
         for message in consumer:
             message = message.value
-            logger.info("Received Message ==> %s", message)
-            print("Received Message ==> %s", message)
+            print("Received Message ====> ", message)
             time.sleep(1)
 
         time.sleep(5)

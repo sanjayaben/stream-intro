@@ -28,7 +28,6 @@ def create_topic_if_not_existing():
     client = KafkaClient(bootstrap_servers='localhost:9092')
     future = client.cluster.request_update()
     client.poll(future=future)
-
     metadata = client.cluster
     if TOPIC in metadata.topics():
         logger.info("Topic already existing %s", TOPIC)
